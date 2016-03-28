@@ -24,3 +24,4 @@ void getSigChecks(void *pos, u32 size, u32 *off, u32 *off2);
 void *getReboot(void *pos, u32 size);
 u32 getfOpen(u8 *proc9Offset, void *rebootOffset);
 u16 *getFirmWrite(void *pos, u32 size);
+u8* getLoader(void *pos, u32 size);

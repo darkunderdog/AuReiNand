@@ -257,6 +257,15 @@ void patchFirm(void){
         *(writeOffset + 1) = writeBlock[1];
     }
 
+	if (fileExists("/aurei/3ds_injector.cxi"))
+	{
+		u8* loader = getLoader(firm, firmSize);
+		if (loader)
+		{
+			fileRead(loader, "/aurei/3ds_injector.cxi", fileSize("/aurei/3ds_injector.cxi"));
+		}
+	}
+
     //Disable signature checks
     u32 sigOffset,
         sigOffset2;
